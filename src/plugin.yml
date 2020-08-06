@@ -1,0 +1,8 @@
+name : BossBanner
+version : 1.0
+author : John
+main : me.John.BossBanner.Main
+description: plugin that makes banner on top of screen
+
+commands:
+  bossbar reload texts:
