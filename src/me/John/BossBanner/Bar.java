@@ -1,8 +1,6 @@
 package me.John.BossBanner;
 
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -48,7 +46,6 @@ public class Bar{
 			double progress = 1.0;//how full the bar is
 			double time = 1.0/(plugin.getConfig().getInt("progressTime"));//amount of time it takes to change the progress on the bar 
 			public List<String> textLines = plugin.getConfig().getStringList("texts");
-			boolean pluginNull= plugin==null;
 
 			
 			@Override
@@ -56,8 +53,7 @@ public class Bar{
 				
 				bar.setProgress(progress);
 				bar.setColor((BarColor) plugin.getConfig().get("barColor"));
-				Logger.getLogger("logger").log(Level.INFO, "message length is " + textLines.size());
-				Logger.getLogger("logger").log(Level.INFO, "plugin is null " + pluginNull);
+				bar.setTitle(format(textLines.get(indexNum)));
 				
 				/*switch(indexNum) { //in these cases we add the different bars and texts. Change the texts here if you like.
 				case 0 :
