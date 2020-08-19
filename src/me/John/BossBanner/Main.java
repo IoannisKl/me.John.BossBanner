@@ -79,26 +79,39 @@ public class Main extends JavaPlugin implements Listener {
 			bar.RemovePlayer(event.getPlayer());
 		}
 	}
-	
+
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if (label.equalsIgnoreCase("textsReload")) {
-			if(sender instanceof Player) {//player command
-				Player player = (Player) sender;
-				if(player.hasPermission("bossbar.admin") ) {//has permission
-				textLines = this.getConfig().getStringList("texts");
-				player.sendMessage("config texts succesfully copied");
-				return true;
-				}
-				else {// does not have permission
-					player.sendMessage("You do not have appropriate permission to execute this command");
-					return false;
+		if (label.equalsIgnoreCase("bossbar")) {
+			if (args[0].equalsIgnoreCase("TextsReload")) {
+				if (sender instanceof Player) {//player command
+					Player player = (Player) sender;
+					if (player.hasPermission("bossbar.admin")) {//has permission
+						textLines = this.getConfig().getStringList("texts");
+						player.sendMessage("config texts succesfully copied");
+						return true;
+					} else {// does not have permission
+						player.sendMessage("You do not have appropriate permission to execute this command");
+						return false;
+					}
 				}
 			}
-			else {//console command
-				return true;
+			else if (args[0].equalsIgnoreCase("disable")) {
+				if (sender instanceof Player) {
+					Player player = (Player) sender;
+					bar.RemovePlayer(player);
+				}
+			}
+			else if (args[0].equalsIgnoreCase("enable")) {
+				if (sender instanceof Player) {
+					Player player = (Player) sender;
+					bar.addPlayer(player);
+				}
 			}
 		}
+		else {//console command
+			return true;
+		}
 		return false;
-	}// to use brigadier
+	}
 	
 }
