@@ -22,9 +22,9 @@ public class Main extends JavaPlugin implements Listener {
 	
 	public Bar bar;
 	
-	public int textArraySize = this.getConfig().getStringList("texts").size();
+	/*public int textArraySize = this.getConfig().getStringList("texts").size();
 	
-	public int gettextArraySize() {
+	  public int gettextArraySize() {
 		return textArraySize;
 	}
 
@@ -38,7 +38,7 @@ public class Main extends JavaPlugin implements Listener {
 	
 	public List<String> getTextLines() {
 		return textLines;
-	}
+	}*/
 	
 	@Override
 	public void onEnable(){
