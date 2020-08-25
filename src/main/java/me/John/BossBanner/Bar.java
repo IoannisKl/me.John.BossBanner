@@ -44,7 +44,7 @@ public class Bar{
             int textsSize = plugin.getConfig().getStringList("texts").size();
         	int indexNum = 0;
 			double progress = 1.0;//how full the bar is
-			double time = 1.0/20;//amount of time it takes to change the progress on the bar should be (plugin.getConfig().getInt("progressTime"))
+			double time = 1.0/(plugin.getConfig().getInt("progressTime"));//amount of time it takes to change the progress on the bar should be (plugin.getConfig().getInt("progressTime"))
 			public List<String> textLines = plugin.getConfig().getStringList("texts");
 
 			
