@@ -2,9 +2,9 @@ startTicks: 0
 repeatTicks: 20
 progressTime: 20
 text:
-  - &a&lhello world
+  - '&a&lhello world'
 texts:
-  - &a&lText1
-  - &a&lText2
-  - &a&lText3
-  - &a&lText4
+  - '&a&lText1'
+  - '&a&lText2'
+  - '&a&lText3'
+  - '&a&lText4'
