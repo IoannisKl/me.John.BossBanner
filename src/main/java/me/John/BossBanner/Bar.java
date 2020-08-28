@@ -79,13 +79,12 @@ public class Bar{
 				if (progress <=0) {
 					if(indexNum<textsSize-1) {
 						indexNum++;
-						progress = 1.0;
-					}
+                    }
 					else { 
 					indexNum=0;
-					progress = 1.0;
-					}
-				}//if bar empties
+                    }
+                    progress = 1.0;
+                }//if bar empties
 			  }
 			
 		};
