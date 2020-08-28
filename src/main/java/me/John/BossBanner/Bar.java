@@ -77,8 +77,9 @@ public class Bar{
 				
 				progress = progress - time;//how fast the bar empties. depends on the value of time. After it empties we go over to the next one
 				if (progress <=0) {
-					if(indexNum<textsSize) {
+					if(indexNum<textsSize-1) {
 						indexNum++;
+						progress = 1.0;
 					}
 					else { 
 					indexNum=0;
